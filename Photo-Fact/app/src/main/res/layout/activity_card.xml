@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CardActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorCustom2"
+            app:titleTextColor="@color/colorWhite">
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorCustom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/actionBar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/toolbar_background">-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/btnBack"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:src="@drawable/ic_arrow_white_24dp"-->
+    <!--android:background="@android:color/transparent"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Confirmation"-->
+    <!--android:textStyle="bold"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="23sp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_toRightOf="@+id/btnBack"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvConfirmation"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:text="Confirmation"-->
+    <!--android:gravity="center"-->
+    <!--android:textSize="25sp"-->
+    <!--android:textStyle="bold"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/actionBar"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--/>-->
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/progressbar"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true" />-->
+
+    <RelativeLayout
+        android:id="@+id/checking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintBottom_toTopOf="@id/btnImpose"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
+
+        <LinearLayout
+            android:id="@+id/addressLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <EditText
+                android:id="@+id/edtCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="70"
+                android:backgroundTint="@color/colorWhite"
+                android:fontFamily="sans-serif-light"
+                android:hint="Card number"
+                android:inputType="textLongMessage"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="17sp" />
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/editLocation"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_weight="30"-->
+                <!--android:background="@null"-->
+                <!--android:src="@drawable/ic_edit_location_black_24dp" />-->
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtIIN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressLinear"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/colorWhite"
+            android:fontFamily="sans-serif-light"
+            android:hint="IIN"
+            android:inputType="text"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/button_red"
+        android:text="Add card"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</RelativeLayout>

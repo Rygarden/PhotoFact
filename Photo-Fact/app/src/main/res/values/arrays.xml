@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="types">
+        <item>First Type</item>
+        <item>Second Type</item>
+        <item>Third Type</item>
+        <item>Fourth Type</item>
+    </array>
+    <array name="colors">
+        <item>#FFFF0000</item>
+        <item>#FF00FF00</item>
+        <item>#FF0000FF</item>
+    </array>
+
+</resources>

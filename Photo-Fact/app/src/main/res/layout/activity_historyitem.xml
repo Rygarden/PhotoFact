@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HistoryItemActivity">
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorCustom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewChooseType"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewChooseType"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorCustom2"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/actionBar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/toolbar_background">-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/btnBack"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:src="@drawable/ic_arrow_white_24dp"-->
+            <!--android:background="@android:color/transparent"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Photo-Fact"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="23sp"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_toRightOf="@+id/btnBack"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textViewImpose"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:paddingBottom="20dp"-->
+        <!--android:text="Impose"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="25sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/actionBar" />-->
+
+    <LinearLayout
+        android:id="@+id/imposeInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        android:background="@drawable/part_background"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewType"
+                android:text="Type: "
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/fine_type"
+                android:text="First type"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="55dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--<ImageView-->
+            <!--android:layout_width="36dp"-->
+            <!--android:layout_height="36dp"-->
+            <!--android:src="@drawable/ic_phone_android_black_24dp"/>-->
+            <ImageView
+                android:id="@+id/imageViewLocation"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/ic_location_on_white_24dp" />
+            <TextView
+                android:id="@+id/fine_address"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="90dp"
+                android:text="Manas str. 56"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateLane"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--<ImageView-->
+            <!--android:layout_width="36dp"-->
+            <!--android:layout_height="36dp"-->
+            <!--android:src="@drawable/ic_phone_android_black_24dp"/>-->
+            <ImageView
+                android:id="@+id/imageViewDate"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/ic_date_range_black_24dp"/>
+            <TextView
+                android:id="@+id/fine_date"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="90dp"
+                android:text="10.04.2019"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/statusLane"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageViewStatus"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/ic_check_black_24dp"/>
+            <TextView
+                android:id="@+id/fine_status"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="90dp"
+                android:text="Accept"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imageLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/dateLane"
+            android:paddingLeft="50dp"
+            android:weightSum="100"
+            android:clickable="true">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/offensePhoto"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_launcher_background"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#FF000000"
+                android:layout_weight="20"/>
+
+            <TextView
+                android:id="@+id/circleImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="80"
+                android:text="Image Name"
+                android:textColor="@color/colorWhite"
+                android:textSize="17sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="40dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

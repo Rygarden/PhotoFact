@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Photo-Fact</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="my_cart">My Cart</string>
+    <string name="delete">DELETE</string>
+</resources>
